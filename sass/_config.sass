@@ -1,12 +1,18 @@
+// Colors
 $primary-color: #444
 $secondary-color: #ecee1e
-$show-home-image: true
+// Background Image
+$show-home-image: true // Enable / Disable Home Background Image
 $home-image: url(../img/background.jpg)
 $background-opacity: 0.9
+// Portrait Image
+$portrait-image: url(../img/portrait.png)
 
+// Transition All
 @mixin easeOut
     transition: all 0.5s ease-out
 
+// Background Options
 @mixin background
     @if $show-home-image 
         &#bg-img
