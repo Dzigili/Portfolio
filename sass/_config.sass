@@ -7,6 +7,7 @@ $home-image: url(../img/background.jpg)
 $background-opacity: 0.9
 // Portrait Image
 $portrait-image: url(../img/portrait.png)
+$portrait-small-image: url(../img/portrait.sm.png)
 
 // Transition All
 @mixin easeOut
@@ -28,3 +29,21 @@ $portrait-image: url(../img/portrait.png)
             height: 100%
             background: rgba($primary-color, $background-opacity)
             z-index: -1
+
+
+// Media Query Mixins
+@mixin mediaSm
+    @media screen and (max-width: 530px)
+        @content
+
+@mixin mediaMd
+    @media screen and (min-width: 531px) and (max-width: 768px)
+        @content
+
+@mixin mediaLg
+    @media screen and (min-width: 769px) and (max-width: 1170px)
+        @content
+
+@mixin mediaXl
+    @media screen and (min-width: 1171px)
+        @content
