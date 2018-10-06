@@ -40,18 +40,23 @@ $portrait-small-image: url(../img/portrait.sm.png)
 
 
 // Media Query Mixins
+@mixin mediaXl
+    @media screen and (min-width: 1171px)
+        @content
+
+@mixin mediaLg
+    @media screen and (max-width: 1170px)
+        @content
+
+@mixin mediaMd
+    @media screen and (max-width: 768px)
+        @content
+
 @mixin mediaSm
     @media screen and (max-width: 530px)
         @content
 
-@mixin mediaMd
-    @media screen and (min-width: 531px) and (max-width: 768px)
-        @content
 
-@mixin mediaLg
-    @media screen and (min-width: 769px) and (max-width: 1170px)
-        @content
 
-@mixin mediaXl
-    @media screen and (min-width: 1171px)
-        @content
+
+
